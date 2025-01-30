@@ -65,17 +65,17 @@
             const head = { x: snake[0].x + dx, y: snake[0].y + dy };
 
             // Обработка прохода через стены
-        if (head.x < 0) {
-            head.x = canvas.width - gridSize; // Если выходит за левую границу, появляется справа
-        } else if (head.x >= canvas.width) {
-            head.x = 0; // Если выходит за правую границу, появляется слева
-        }
+            if (head.x < 0) {
+                head.x = canvas.width - gridSize;
+            } else if (head.x >= canvas.width) {
+                head.x = 0;
+            }
         
-        if (head.y < 0) {
-            head.y = canvas.height - gridSize; // Если выходит за верхнюю границу, появляется снизу
-        } else if (head.y >= canvas.height) {
-            head.y = 0; // Если выходит за нижнюю границу, появляется сверху
-        }
+            if (head.y < 0) {
+                head.y = canvas.height - gridSize;
+            } else if (head.y >= canvas.height) {
+                head.y = 0;
+            }
 
             // Добавление новой головы
             snake.unshift(head);
